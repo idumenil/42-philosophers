@@ -7,7 +7,7 @@ At a shared dining table, five philosophers engage in a unique dining experience
 
 The objective of this project is to simulate this problem with a variable number of philosophers. Each philosopher represents a process, and the goal is to successfully synchronize each of them so that they can eat, think, and sleep on time, and no resources are blocked (deadlock). 
 
-[link of the complete subject](https://cdn.intra.42.fr/pdf/pdf/111399/en.subject.pdf)
+<a href="https://cdn.intra.42.fr/pdf/pdf/111399/en.subject.pdf" target="_blank">link of the complete subject</a>
 
 ## Prerequisites
 
