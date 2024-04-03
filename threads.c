@@ -12,11 +12,17 @@
 
 #include "philo.h"
 
+//dead_loop function checks regularly if a philo is dead
+//If he's dead : the associated mutex is unlocked, the function returns 1 (abnormal behaviour)
+//If he's not dead : the mutex is unlocked, the functions returns 0 (normal behaviour)
 int	dead_loop(t_philo *philo)
 {
 	pthread_mutex_lock(philo->dead_lock);
 	if (*philo->dead == 1)
-		return (pthread_mutex_unlock(philo->dead_lock), 1);
+	{
+		pthread_mutex_unlock(philo->dead_lock);
+		return (1);
+	}
 	pthread_mutex_unlock(philo->dead_lock);
 	return (0);
 }
